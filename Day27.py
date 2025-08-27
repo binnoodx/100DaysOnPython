@@ -1,75 +1,65 @@
-#KBC
 print("--- Welcome to KBC ---")
 
-questions = ["Which of the following Language is not OOPS?" , "What is correct print Statement in Python?","Which company does Facebook Belongs?"]
+questions = [
+  [
+    "Which Company Own Facebook ?" , "Amazon" , "Meta" , "Apple" , "Google" , 2
+  ],
+  [
+    "Who is the founder of Microsoft?" , "Steve Jobs" , "Bill Gates" , "Mark Zuckerberg" , "Elon Musk" , 2
+  ],
+  [
+    "What does CPU stand for?" , "Central Processing Unit" , "Computer Personal Unit" , "Control Processing Unit" , "Central Program Utility" , 1
+  ],
+  [
+    "Which programming language is used for web styling?" , "HTML" , "CSS" , "Python" , "C++" , 2
+  ],
+  [
+    "Who is known as the father of the Internet?" , "Tim Berners-Lee" , "Vinton Cerf" , "Dennis Ritchie" , "James Gosling" , 2
+  ],
+  [
+    "What year was JavaScript created?" , "1991" , "1995" , "2000" , "1989" , 2
+  ],
+  [
+    "Which company developed the iPhone?" , "Samsung" , "Apple" , "Nokia" , "Google" , 2
+  ],
+  [
+    "What does AI stand for?" , "Artificial Integration" , "Advanced Internet" , "Artificial Intelligence" , "Automated Information" , 3
+  ],
+  [
+    "Which is the most widely used database?" , "MongoDB" , "MySQL" , "Firebase" , "Redis" , 2
+  ],
+  [
+    "Who created Linux?" , "Linus Torvalds" , "Richard Stallman" , "Dennis Ritchie" , "Bjarne Stroustrup" , 1
+  ],
+  [
+    "What does HTTP stand for?" , "HyperText Transfer Protocol" , "High Transfer Text Program" , "Hyperlink Transfer Protocol" , "HyperText Transmission Path" , 1
+  ]
+];
 
-# o_1ptionsForQue = {"opt1":"Java" , "opt2":"Python" , "opt3":"C++" ,"opt4":"C"}
-# o_2ptionsForQue2 = {"opt1":"print()" , "opt2":"System.out.println()" , "opt3":"printf()" ,"opt4":"console.log()"}
-# o_3ptionsForQue3 = {"opt1":"Apple" , "opt2":"Google" , "opt3":"Meta" ,"opt4":"Amazon"}
-
-o1 = ["Java" , "Python" , "C++" , "C"]
-o2 = ["print()" , "System.out.println()" , "printf()" , "console.log()"]
-o3 = ["Apple" , "Google" , "Meta" , "Amazon"]
-
-
-
-answers = ["d","a","c"]
-
-
-Question_no = 0
-isUserPlayable = True
+# print(questions[1][0])
 user_cash = 0
-
-for question in range(0, len(questions)):
-
+gameOver = False
+for question in questions:
     
+    hasAnswered = False
 
-    while(isUserPlayable!=False):
+    while(hasAnswered != True and gameOver == False):
+        print("The Question is ",question[0],"\n")
+        print("Your Options Are \n")
+        for i in range(1,5):
+            print(question[i],"  ")
+        user_input = int(input("Choose 1/2/3/4  -> "))
 
-        Question_no = Question_no +1
-
-
-        print("Question :" , questions[Question_no-1])
-
-
-        print("Options : \n")
-
-        
-
-
-        
-        
-
-
-
-        user_inp = str(input("Enter Answer : "))
-        print("User Input " , user_inp.lower())
-
-        if(user_inp.lower() == answers[Question_no-1]):
-            print("Your Answer is Correct")
-            user_cash = user_cash + 100
-            print("Your Total Cash is " , user_cash)
-            isUserPlayable = True
-
+        if(user_input == question[5]):
+            print("Correct Answer \n")
+            user_cash = user_cash +100;
+            hasAnswered = True
         else:
-            print("Your answer is Incorrect and You are taking ",user_cash," with You!")
-            isUserPlayable = False
-            
-
-        print("\n\n")
-            
-            
-
-        
+            print("Wrong Answer and You are Out \n")
+            gameOver = True
 
 
-        
-        
-                
-    
-
-        
-        
 
 
-    
+print(f"Game Over and You won {user_cash}")
+
