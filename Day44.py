@@ -10,3 +10,8 @@ hello()
 
 print(dir(math)) # Show all Functions inside Math
 
+def hey():
+    print("Hey , Hello Form Day 44")
+
+if __name__ == "__main__":
+    hey()
