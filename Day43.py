@@ -10,3 +10,7 @@
 # pip install -r requirements.txt ---> Install those packages which are in txt file
 #
 
+# for Day44.py
+def hello():
+    print("Hello World")
+
