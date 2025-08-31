@@ -1,1 +1,1 @@
-# Attempt to solve problem of
+# Attempt to solve problem of Day 40
