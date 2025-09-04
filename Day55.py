@@ -27,6 +27,9 @@ while(userContinue):
               print("Computer Win")
           else:
               print("You Win")
+        
+        elif user == comp:
+           print("Game Drawn")
 
         else:
           if comp == "Rock":
