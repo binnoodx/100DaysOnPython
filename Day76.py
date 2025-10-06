@@ -26,4 +26,5 @@ merger.write(output)
 
 # Close File Descriptors
 merger.close()
+
 output.close()
