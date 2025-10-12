@@ -15,7 +15,7 @@ import time
 isManAlive = True
 
 while(isManAlive):
-    time.sleep(4)
+    time.sleep(1*60*60)
     print("\nHey , Drink Some Water. Stay Hydrated !\n")
     AudioPlayer("beep.mp3").play(block=True)
 
