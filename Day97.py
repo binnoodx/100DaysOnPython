@@ -3,7 +3,6 @@
 from concurrent.futures import ThreadPoolExecutor
 import time
 import threading
-
 def func1(seconds):
     time.sleep(seconds)
 
@@ -58,4 +57,6 @@ def polingDemo():
         print(f"Code by Advance Threading - Method 2 Run In {execution_time} Seconds")
     
 polingDemo()
+
+
 
